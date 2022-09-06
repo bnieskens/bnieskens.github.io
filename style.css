@@ -1,7 +1,8 @@
 :root {
     --primary: rgb(247, 247, 247);
     --secondary: darkcyan;
-    --articleBG: rgb(247, 247, 247);
+    --articleBG1: rgb(247, 247, 247);
+    --articleBG2: rgb(240, 250, 246);
     --borderRadius: 1rem;
 }
 
@@ -127,16 +128,22 @@ h4 {
 
 section {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    /* grid-template-columns: 1fr 1fr 1fr; */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 20px;
+    margin: -20k auto;
 }
 
 article {
-    background-color: var(--articleBG);
+    background-color: var(--articleBG1);
     padding: 1rem;
     border-radius: 1rem;
-    margin: 0rem 1.2rem 1.2rem 0rem;
 }
 
+article:nth-child(even) {
+    background-color: var(--articleBG2);
+
+}
 footer {
     font-family: Open Sans Regular;
     font-weight: 400;
