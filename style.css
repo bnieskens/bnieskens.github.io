@@ -18,7 +18,6 @@
     src: url(fonts/abeezee/ABeeZee-Italic.ttf);
 }
 
-/* FONT: OPEN SANS */
 @font-face{
     font-family: Open Sans Regular;
     src: url(fonts/OpenSans/OpenSans-Regular.ttf);
@@ -50,35 +49,21 @@
 }
 
 
-
-@media (max-width: 700px) {
-    article {
-        flex: 100%;
-    }
-}
-
 html {
     font-size: 16px;
 }   
 
 body {
-    background-color:lightgray;
-    background: url(img/christopher-gower-m_HRfLhgABo-unsplash.jp);
-    height: 1000px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-    font-family: Abeezee Regular;
+    background-color:white;
+    font-family: Open Sans Regular;
     font-size: 1rem;
     line-height: 1.5rem;
 }
 
-.container {
-    display: flex;
-    flex-wrap: wrap;
+.wrapper {
+
     width: 80%;
-    max-width: 1300px;
+    /* max-width: 1300px;*/
     margin-top: 20px;
     margin-left: auto;
     margin-right: auto;
@@ -107,57 +92,52 @@ a:active {
 }
 
 header {
-    width: auto;
-    margin: 0 1.4em 1.4em 0;
-    opacity: 0.9;
+    margin: 0 1.5em 1.5em 0;
     font-family: Abeezee Regular;
-    letter-spacing: 1px;
-    font-weight: 700;
-    padding: 0.5em 0.5em 0 0.5em;
-    text-align: center;
-    /*background-color: var(--primary);*/
-    opacity: 0.9;
-    border-radius: 1rem;
 }
 
 
-#name {
+h1{
     margin: 0px 0px;
-    font-family: Open Sans Semibold Italic;
-    font-size: 2rem;
+    font-family: Open Sans Semibold;
     line-height: 1.5em;
     letter-spacing: 0px;
     color: var(--secondary);
 
 }
 
-section {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: end;
+h3 {
+    text-align: begin;
+    margin: 0px 0px;
+    font-family: Open Sans Semibold;
+    line-height: 1.5em;
+    letter-spacing: 0px;
+    color: black;
 
+}
+
+h4 {
+    text-align: begin;
+    margin: 0px 0px;
+    font-family: Open Sans Semibold Italic;
+    line-height: 1.5em;
+    letter-spacing: 0px;
+    color: black;
+}
+
+section {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 
 article {
-    flex: 20%;
-    font-family: Open Sans Regular;
-    font-weight: 600;
     background-color: var(--articleBG);
-    opacity: 0.95;
     padding: 1rem;
     border-radius: 1rem;
     margin: 0rem 1.2rem 1.2rem 0rem;
-    /*box-shadow: 3px 3px 4px 2px rgb(170, 170, 170);*/
-}
-
-
-.contentSource {
-    font-family: Open Sans Italic;
-    font-weight: 400;
 }
 
 footer {
-    flex: 30%;
     font-family: Open Sans Regular;
     font-weight: 400;
     font-size: 0.7rem;
@@ -169,47 +149,3 @@ footer {
     border-radius: 1rem;
     margin: 0rem 1.2rem 1.2rem 0rem;
 }   
-
-/* SETTINGS MODAL */
-/* The Modal (background) */
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    left: 2rem;
-    top: 2rem;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-  }
-  
-  /* Modal Content/Box */
-  .modal-content {
-    background-color: var(--primary);
-    margin: 15% auto; /* 15% from the top and centered */
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
-  }
-  
-  /* The Close Button */
-  .close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-  }
-  
-  .close:hover,
-  .close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-  }
-
-
-
-
-
