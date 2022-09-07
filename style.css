@@ -8,16 +8,6 @@
 }
 
 
-* {
-    box-sizing: border-box;
-  }
-
-
-
-
- 
-
-
 
 @font-face{
     font-family: Abeezee Regular;
@@ -65,6 +55,12 @@
     src: url('fonts/cc-icons.ttf') format('truetype');
 }
 
+
+* {
+    box-sizing: border-box;
+  }
+
+
 html {
     font-size: 16px;
 }   
@@ -78,7 +74,7 @@ body {
 
 .wrapper {
     display: grid;
-    width: 80%;
+    width: 90%;
     /* max-width: 1300px;*/
     margin-top: 20px;
     margin-left: auto;
@@ -122,7 +118,7 @@ h1{
     color: var(--secondary);
     margin: 0px 0px;
     font-family: Open Sans Semibold;
-    line-height: 1.5em;
+    line-height: 1.3em;
     letter-spacing: 0px;
     padding: 0 15px;
     border-radius: 0rem;
@@ -134,7 +130,7 @@ h1{
 h3 {
     text-align: begin;
     margin: 0px 0px;
-    font-family: Open Sans Semibold;
+    font-family: Open Sans Regular;
     line-height: 1.5em;
     letter-spacing: 0px;
     color: var(--dark);
@@ -144,7 +140,7 @@ h3 {
 h4 {
     text-align: begin;
     margin: 0px 0px;
-    font-family: Open Sans Semibold Italic;
+    font-family: Open Sans Italic;
     line-height: 1.5em;
     letter-spacing: 0px;
     color: var(--dark);
@@ -161,14 +157,16 @@ section {
 
 article {
     background-color: var(--grey);
-    padding: 1rem;
+    padding: 1.3rem;
     border-radius: 0.4rem;
     /*box-shadow: 0px 3px 4px 0px rgb(170, 170, 170);*/
 }
 
+/*
 article:nth-child(even) {
     background-color: var(--grey);
 }
+*/
 
 ul {
     list-style-type: none;
