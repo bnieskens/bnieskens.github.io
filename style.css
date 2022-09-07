@@ -14,22 +14,10 @@
 
 
 
-@media screen {
-    @font-face {
-    font-family: 'CC-ICONS';
-    font-style: normal;
-    font-weight: normal;
-    src: url('fonts/cc-icons.ttf') format('truetype');
-    }
 
-    span.cc {
-    font-family: 'CC-ICONS';
-    color: var(--dark);
-    font-size: 2rem;
-    line-height: 1em;
-    text-decoration: none;
-    }
-}
+ 
+
+
 
 @font-face{
     font-family: Abeezee Regular;
@@ -68,6 +56,13 @@
 @font-face{
     font-family: Open Sans Bold Italic;
     src: url(fonts/OpenSans/OpenSans-BoldItalic.ttf);
+}
+
+@font-face {
+    font-family: 'CC-ICONS';
+    font-style: normal;
+    font-weight: normal;
+    src: url('fonts/cc-icons.ttf') format('truetype');
 }
 
 html {
@@ -112,6 +107,11 @@ a:active {
     text-decoration: underline;
 }
 
+
+cc {
+   
+}
+
 header {
     margin: 0 0 1.5em 0;
     font-family: Abeezee Regular;
@@ -154,7 +154,6 @@ h4 {
 section {
     display: grid;
     /* grid-template-columns: 1fr 1fr 1fr; */
-    grid-template-rows: auto;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-gap: 20px;
     margin: -15px auto;
@@ -179,14 +178,15 @@ ul {
 
 footer {
     margin-top: 40px;
-    width: fit-content;
-    font-family: Open Sans Regular;
-    font-weight: 400;
-    font-size: 1rem;
-    line-height: 1em;
-    letter-spacing: 1px;
-    background-color: var(--grey);
-    padding: 1em;
+    padding: 0.5em;
     border-radius: 0.3rem;
+    background-color: var(--grey);
+    width: fit-content;
+    font-size: 1.5em;
+    line-height: 1em;
+    letter-spacing: 0.3em;
+    font-family: 'CC-ICONS';
+    color: var(--dark);
+    text-decoration: none;
 }   
 
