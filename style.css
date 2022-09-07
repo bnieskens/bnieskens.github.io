@@ -104,10 +104,6 @@ a:active {
 }
 
 
-cc {
-   
-}
-
 header {
     margin: 0 0 1.5em 0;
     font-family: Abeezee Regular;
@@ -129,11 +125,14 @@ h1{
 
 h3 {
     text-align: begin;
-    margin: 0px 0px;
+    margin: 5px 0px;
     font-family: Open Sans Regular;
     line-height: 1.5em;
     letter-spacing: 0px;
     color: var(--dark);
+    background-color: #dcb760;
+    width: fit-content;
+    padding: 0em 0.5em;
 
 }
 
@@ -144,7 +143,7 @@ h4 {
     line-height: 1.5em;
     letter-spacing: 0px;
     color: var(--dark);
-    text-align: left;
+    text-align: end;
 }
 
 section {
@@ -171,7 +170,15 @@ article:nth-child(even) {
 ul {
     list-style-type: none;
     padding: 0px;
-    margin: 10px 0px 0px 0px;
+    margin: 10px 0px 0px 10px;
+}
+
+li {
+    /* background-color: #e0bc67;
+    width: fit-content;
+    padding: 0em 0.5em;*/
+    margin-bottom: 0.3em;
+
 }
 
 footer {
