@@ -114,6 +114,7 @@ main {
 }
 section {
     display: grid;
+    
     /* grid-template-columns: 1fr 1fr 1fr;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-gap: 20px;
@@ -122,6 +123,7 @@ section {
 
 article {
     background-color: var(--article-bg);
+    padding-left: 2em;
     /* padding: 1.3rem; */
     /* border-radius: 0.4rem; */
     /*box-shadow: 0px 5px 7px 0px rgb(170, 170, 170);*/
