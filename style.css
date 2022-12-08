@@ -109,16 +109,18 @@ section {
 
 
 h2 {
-    position: absolute;
-    width: 1em;
+    /* position: absolute;
+    writing-mode: vertical-rl;
+    text-align: end;
+    transform: rotate(180deg); */
+    padding-left: 2.5em;
+    grid-column: 1 / -1;
     margin: .5em 0 0 -2em;
     font-family: DM Serif Display Regular;
     font-weight: 400;
     font-size: 2em;
     line-height: 1.3em;
-    writing-mode: vertical-rl;
-    text-align: end; 
-    transform: rotate(180deg);
+    
 }
 
 article {
