@@ -73,7 +73,7 @@ body {
     font-family: Open Sans Regular;
     background-color: var(--body-bg);
     line-height: 1.5em;
-    margin-top: 1em;
+    margin: 0 2.5em;
 }
 
 h1 {
@@ -81,21 +81,17 @@ h1 {
     font-weight: 700;
     letter-spacing: .05em;
     line-height: 1.3em;
-    margin-bottom: -0.2em;
 }
 
 header {
     background-color: var(--header-bg);
-    margin: -1em 0 0 2em;
-    padding: .3em 1em 0 2em;
-    /* box-shadow: var(--shadow); */
+    padding: 0 0;
 }
 
 header p {
-   margin-top: .2em;
+   margin-top: -1.2em;
    letter-spacing: .15em;
    text-transform: uppercase;
-   
 }
 
 section {
@@ -103,24 +99,18 @@ section {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     grid-gap: 20px;
     /* background-color: var(--secondary); */
-    padding: 0 2em 2em 3em;
+    /* padding: 0 2em 2em 3em; */
     margin: 0 0 3em 0;
 }
 
 
 h2 {
-    /* position: absolute;
-    writing-mode: vertical-rl;
-    text-align: end;
-    transform: rotate(180deg); */
-    padding-left: 2.5em;
     grid-column: 1 / -1;
-    margin: .5em 0 0 -2em;
+    margin: .5em 0 0 0;
     font-family: DM Serif Display Regular;
     font-weight: 400;
     font-size: 2em;
-    line-height: 1.3em;
-    
+    line-height: 1.3em; 
 }
 
 article {
@@ -128,7 +118,7 @@ article {
     flex-direction: column;
     justify-content: stretch;
     background-color: var(--article-bg);
-    padding: 2em 2.5em 2em 2.5em;
+    padding: 2em 2em 2em 2em;
     border-radius: var(--border-radius);
     box-shadow: var(--shadow);
 }
@@ -195,12 +185,14 @@ a:active {
     background-color: var(--active);
 }
 
+footer {
+    margin-top: -1em;
+}
+
 footer ul {
     display: flex;
     justify-content: flex-start;
     flex-wrap: wrap;
-    padding-left: 1em;
-    margin: -1em 0 0 2em;
     letter-spacing: 0.2em;
     background-color: var(--footer-bg);
 }
@@ -211,13 +203,9 @@ footer ul li:first-of-type{
     font-size: 1.4em;
     line-height: 1em;
     letter-spacing: 0.3em;
-}   
-
-
-footer ul li:first-of-type {
-    margin: .7em 1em;
+    margin: .7em 0;
     letter-spacing: 0.1em;
-}
+}   
 
 footer ul li {
     margin: 1em 1em;
