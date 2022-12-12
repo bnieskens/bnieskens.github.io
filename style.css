@@ -1,3 +1,4 @@
+/* DEFAULT DARK/LIGHT MODE: LIGHT*/
 :root {
     --primary: rgb(0, 36, 79);
     --secondary: rgb(225, 225, 225);
@@ -10,7 +11,8 @@
     --padding-left: 2em;
 }
 
-@media (prefers-color-scheme: light) {
+/* LIGHT MODE */
+@media screen and (prefers-color-scheme: light) {
     :root {
         --primary: rgb(0, 36, 79);
         --secondary: rgb(225, 225, 225);
@@ -20,10 +22,10 @@
 
         --shadow: 0px 3px 5px 0px rgb(170, 170, 170);
     }
-
 }
 
-@media (prefers-color-scheme: dark) {
+/* DARK MODE */
+@media screen and (prefers-color-scheme: dark) {
     :root {
 
         --primary: rgb(200, 200, 200);
@@ -36,7 +38,20 @@
     }
 }
 
-/* Kleur blauw */
+/* PRINT */
+@media print {
+    :root {
+        --primary: rgb(0, 0, 0);
+        --secondary: rgb(225, 225, 225);
+        --highlight: rgb(255, 149, 0);
+        --body-bg: none;
+        --section-bg: none;
+    
+        --shadow: none;
+    }
+}
+
+/* blauwe dark mode */
 /* 
         --section-bg: rgba(0, 36, 79, 0.05);
         --primary: rgb(200, 200, 200);
@@ -97,7 +112,7 @@ header {
     color: var(--primary);
     text-align: center;
     border-top: 2px solid var(--highlight);
-    background-color: var(--section-bg);
+    background-color: var(--body-bg);
 }
 
 h1 {
@@ -111,7 +126,7 @@ header p {
    margin: -1.2em 0 0 0;
    font-size: .8em;
    font-weight: 500;
-   letter-spacing: .2em;
+   letter-spacing: .5em;
    text-transform: uppercase;
    color: var(--highlight);
    text-align: center;
@@ -119,14 +134,15 @@ header p {
 
 section {
     background: var(--section-bg);
-    padding: 1em 2em 2em 2em;
-    margin: 0 0 3em 0;
+    padding: 1em 2em 1em 2em;
+    margin: 0 0 2em 0;
 }
 
 section.cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-gap: 20px;
+    padding-bottom: 3em;
 }
 
 h2 {
