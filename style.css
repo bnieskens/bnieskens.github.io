@@ -1,7 +1,7 @@
 :root {
     --primary: rgb(0, 36, 79);
     --secondary: rgb(225, 225, 225);
-    --active: rgb(255,149,0);
+    --highlight: rgb(255,149,0);
     --body-bg: rgb(255, 255, 255);
     --header-bg-color: rgba(0, 36, 79, 0.05);
     --article-bg: rgb(255, 255, 255);
@@ -14,51 +14,31 @@
     --shadow: 0px 3px 5px 0px rgb(170, 170, 170);
 }
 
-/* H1 font */
-@font-face { 
-    font-family: Press Start Regular;
-    src: url(fonts/Press_Start_2P/PressStart2P-Regular.ttf);
-}
-
-/* H2 font */
-@font-face { 
-    font-family: Poppins Medium;
-    src: url(fonts/Poppins/Poppins-Medium.ttf);
-}
-
 /* body font */
 @font-face {
     font-family: Open Sans Regular;
     src: url(fonts/OpenSans/OpenSans-Regular.ttf);
 }
 
-/* h3 font */
+/* H1 font */
+@font-face { 
+    font-family: Press Start Regular;
+    src: url(fonts/Press_Start_2P/PressStart2P-Regular.ttf);
+}
+
+/* H2 & H3 font */
 @font-face {
     font-family: Open Sans Bold;
     src: url(fonts/OpenSans/OpenSans-Bold.ttf);
 }
 
-/* H4 font */
-@font-face {
-    font-family: Poppins Light Italic;
-    src: url(fonts/Poppins/Poppins-LightItalic.ttf);
-}
-
-@font-face{
-    font-family: Open Sans Semibold;
-    src: url(fonts/OpenSans/OpenSans-Semibold.ttf);
-}
-
-@font-face {
-    font-family: Open Sans Bold Italic;
-    src: url(fonts/OpenSans/OpenSans-BoldItalic.ttf);
-}
 
 /* H4 font */
 @font-face{
     font-family: Open Sans Light Italic;
     src: url(fonts/OpenSans/OpenSans-LightItalic.ttf);
 }
+
 
 @font-face {
     font-family: 'CC-ICONS';
@@ -92,16 +72,17 @@ header {
 h1 {
     font-family: Press Start Regular;
     font-size: 1.3rem;
-    letter-spacing: .05em;
+    /* letter-spacing: .05em; */
     line-height: 1.2em;
 }
 
 header p {
    margin: -1.2em 0 0 0;
    font-size: .8em;
+   font-weight: 500;
    letter-spacing: .2em;
    text-transform: uppercase;
-   color: var(--active);
+   color: var(--highlight);
    text-align: center;
 }
 
@@ -121,12 +102,12 @@ section.cards {
 h2 {
     grid-column: 1 / -1;
     margin: .5em 0 0 0;
-    padding: 0 0 0 1.5em;
-    font-family: Poppins Medium;
-    font-weight: 400;
+    padding: 0 0 0 .6em;
+    font-family: Open Sans Bold;
+    font-weight: 500;
     font-size: 1.4rem;
     line-height: 1.4em; 
-    border-left: 2px solid var(--active);
+    border-left: 2px solid var(--highlight);
 }
 
 article {
@@ -134,7 +115,7 @@ article {
     flex-direction: column;
     justify-content: stretch;
     background-color: var(--article-bg);
-    padding: 3em 2em 3em 2em;
+    padding: 3em 2em 3em 3em;
     border-radius: var(--border-radius);
     box-shadow: var(--shadow);
 }
@@ -164,7 +145,7 @@ a {
     font-weight: bold;
     text-decoration: none;
     color: var(--primary);
-    border-bottom: 2px solid var(--active);
+    border-bottom: 2px solid var(--highlight);
     width: max-content;
     padding: .2em .5em .2em .5em;
     transition: all .1s ease-in;
@@ -193,11 +174,11 @@ section.links ul {
 a:hover {
     color: var(--secondary);
     background-color: var(--primary);
-    border-bottom: 2px solid var(--active);
+    border-bottom: 2px solid var(--highlight);
 }
 
 a:active {
-    background-color: var(--active);
+    background-color: var(--highlight);
 }
 
 footer {
