@@ -97,6 +97,7 @@ header {
     color: var(--primary);
     text-align: center;
     border-top: 2px solid var(--highlight);
+    background-color: var(--section-bg);
 }
 
 h1 {
