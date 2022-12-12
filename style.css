@@ -6,7 +6,9 @@
     --header-bg: rgb(255, 255, 255);
     /* --article-bg: rgb(239, 236, 216); */
     --article-bg: rgb(255, 255, 255);
-    --section-bg: rgb(238, 238, 238);
+    /* --section-bg: linear-gradient(162deg, rgba(141, 134, 255, 1) 0%, rgba(115, 121, 209, 1) 40%, rgba(42, 188, 219, 1) 100%); */
+    /* --section-bg: linear-gradient(342deg, rgba(206, 255, 72, 1) 0%, rgba(122, 209, 115, 1) 43%, rgba(42, 188, 219, 1) 100%); */
+    --section-heading: rgba(122, 209, 115, 1);
     --footer-bg: rgb(255, 255, 255);
     --borderRadius: 1rem;
     --padding-left: 2em;
@@ -99,7 +101,7 @@ section {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-gap: 20px;
-    background-color: var(--section-bg);
+    background: var(--section-bg);
     padding: 0 2em 2em 2em;
     margin: 0 0 3em 0;
 }
@@ -112,6 +114,7 @@ h2 {
     font-weight: 400;
     font-size: 2em;
     line-height: 1.3em; 
+    color: white;
 }
 
 article {
