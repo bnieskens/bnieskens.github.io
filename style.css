@@ -1,27 +1,26 @@
 :root {
-    --primary: rgb(17, 17, 17);
-    --secondary: rgb(239, 236, 216);
-    --active: #ff9500;
+    --primary: rgb(0, 36, 79);
+    --secondary: rgb(225, 225, 225);
+    --active: rgb(255,149,0);
     --body-bg: rgb(255, 255, 255);
-    --header-bg: rgb(255, 255, 255);
-    /* --article-bg: rgb(239, 236, 216); */
+    --header-bg-color: rgba(0, 36, 79, 0.05);
     --article-bg: rgb(255, 255, 255);
-    /* --section-bg: linear-gradient(162deg, rgba(141, 134, 255, 1) 0%, rgba(115, 121, 209, 1) 40%, rgba(42, 188, 219, 1) 100%); */
-    /* --section-bg: linear-gradient(342deg, rgba(206, 255, 72, 1) 0%, rgba(122, 209, 115, 1) 43%, rgba(42, 188, 219, 1) 100%); */
+    --section-bg: rgba(0, 36, 79, 0.05);
     --section-heading: rgba(122, 209, 115, 1);
+    --anchor-bg: rgba(0, 36, 79, 0.05);
     --footer-bg: rgb(255, 255, 255);
     --borderRadius: 1rem;
     --padding-left: 2em;
     --shadow: 0px 3px 5px 0px rgb(170, 170, 170);
 }
 
-/* H1 & H2 font */
+/* H1 font */
 @font-face { 
-    font-family: DM Serif Display Regular;
-    src: url(fonts/DM_Serif_Display/DMSerifDisplay-Regular.ttf);
+    font-family: Press Start Regular;
+    src: url(fonts/Press_Start_2P/PressStart2P-Regular.ttf);
 }
 
-/* H3 font */
+/* H2 font */
 @font-face { 
     font-family: Poppins Medium;
     src: url(fonts/Poppins/Poppins-Medium.ttf);
@@ -33,6 +32,7 @@
     src: url(fonts/OpenSans/OpenSans-Regular.ttf);
 }
 
+/* h3 font */
 @font-face {
     font-family: Open Sans Bold;
     src: url(fonts/OpenSans/OpenSans-Bold.ttf);
@@ -54,9 +54,10 @@
     src: url(fonts/OpenSans/OpenSans-BoldItalic.ttf);
 }
 
+/* H4 font */
 @font-face{
-    font-family: Open Sans Semibold Italic;
-    src: url(fonts/OpenSans/OpenSans-SemiboldItalic.ttf);
+    font-family: Open Sans Light Italic;
+    src: url(fonts/OpenSans/OpenSans-LightItalic.ttf);
 }
 
 @font-face {
@@ -72,49 +73,60 @@
   }
 
 
+
 body {
     font-family: Open Sans Regular;
     background-color: var(--body-bg);
-    line-height: 1.5em;
+    color: var(--primary);
+    line-height: 1.7em;
     margin: 0 0;
 }
 
-h1 {
-    font-family: DM Serif Display Regular;
-    font-weight: 700;
-    letter-spacing: .05em;
-    line-height: 1.3em;
-}
 
 header {
-    background-color: var(--header-bg);
-    padding: 0 2em;
+    padding: .8em 2em 1em 2em;
+    color: var(--primary);
+    text-align: center;
+}
+
+h1 {
+    font-family: Press Start Regular;
+    font-size: 1.3rem;
+    letter-spacing: .05em;
+    line-height: 1.2em;
 }
 
 header p {
-   margin-top: -1.2em;
-   letter-spacing: .15em;
+   margin: -1.2em 0 0 0;
+   font-size: .8em;
+   letter-spacing: .2em;
    text-transform: uppercase;
+   color: var(--active);
+   text-align: center;
 }
 
 section {
+    background: var(--section-bg);
+    padding: 1em 2em 2em 2em;
+    margin: 0 0 3em 0;
+}
+
+section.cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-gap: 20px;
-    background: var(--section-bg);
-    padding: 0 2em 2em 2em;
-    margin: 0 0 3em 0;
 }
 
 
 h2 {
     grid-column: 1 / -1;
     margin: .5em 0 0 0;
-    font-family: DM Serif Display Regular;
+    padding: 0 0 0 1.5em;
+    font-family: Poppins Medium;
     font-weight: 400;
-    font-size: 2em;
-    line-height: 1.3em; 
-    color: white;
+    font-size: 1.4rem;
+    line-height: 1.4em; 
+    border-left: 2px solid var(--active);
 }
 
 article {
@@ -128,16 +140,16 @@ article {
 }
 
 h3 {
-    font-family: Poppins Medium;
-    font-size: 1.2em;
+    font-family: Open Sans Bold;
+    font-weight: 400;
     line-height: 1.3em;
 }
 
 h4 {
-    font-family: Poppins Light Italic;
-    font-size: 1em;
+    font-family: Open Sans Light Italic;
     margin-bottom: 0.1em;
     margin-top: -.8em;
+    /* color: var(--secondary); */
 }
 
 
@@ -146,23 +158,21 @@ ul {
     padding: 0px;
 }
 
-/* section.social-media article ul li {
-    margin-top: 1em;
-    margin-left: auto;
-} */
-
 a {
     display: block;
     font-size: 1em;
     font-weight: bold;
     text-decoration: none;
-    background-color: var(--article-bg);
-    border-radius: .5em .5em 0 0;
     color: var(--primary);
-    border-bottom: 1px solid var(--primary);
+    border-bottom: 2px solid var(--active);
     width: max-content;
     padding: .2em .5em .2em .5em;
     transition: all .1s ease-in;
+}
+
+article p:last-of-type {
+    margin-bottom: 2em;
+    /* align-self: end; */
 }
 
 article a {
@@ -171,22 +181,19 @@ article a {
 }
 
 
-section.social-media article ul {
+
+section.links ul {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: flex-start;
+    gap: 2em;
 }
 
-/* Bron 4 */
-section.social-media article ul a {
-    margin: 1em 1em 1em 1em;
-    align-self: start;
-}
 
 a:hover {
     color: var(--secondary);
     background-color: var(--primary);
-    /* border-bottom: 0px solid var(--primary); */
+    border-bottom: 2px solid var(--active);
 }
 
 a:active {
@@ -196,6 +203,7 @@ a:active {
 footer {
     margin-top: -1em;
     padding-left: 2em;
+    /* background-color: var(--primary); */
 }
 
 footer ul {
@@ -203,26 +211,28 @@ footer ul {
     justify-content: flex-start;
     flex-wrap: wrap;
     letter-spacing: 0.2em;
-    background-color: var(--footer-bg);
+    color: var(--secondary);
 }
 
 
-footer ul li:first-of-type{
+footer ul li:first-of-type {
     font-family: 'CC-ICONS';
-    font-size: 1.4em;
+    font-size: 1.4rem;
     line-height: 1em;
     letter-spacing: 0.3em;
     margin: .7em 0;
     letter-spacing: 0.1em;
+    
 }   
 
 footer ul li {
     margin: 1em 1em;
     letter-spacing: 0.1em;
+
 }
 
 footer a {
     text-decoration: none;
+    border: none;
 }
-
 
