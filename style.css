@@ -1,14 +1,24 @@
 /* DEFAULT DARK/LIGHT MODE: LIGHT*/
 :root {
-    --primary: rgb(0, 36, 79);
-    --secondary: rgb(225, 225, 225);
-    --highlight: rgb(255, 149, 0);
-    --body-bg: rgb(239, 240, 244);
-    --section-bg: rgb(220, 224, 232);
+    color-scheme: light dark;
 
-    --shadow: 0px 3px 5px 0px rgb(170, 170, 170);
+    --highlight: rgb(255, 149, 0);
+
     --borderRadius: 1rem;
     --padding-left: 2em;
+}
+
+
+/* DARK MODE */
+@media screen and (prefers-color-scheme: dark) {
+    :root {
+        --primary: rgb(200, 200, 200);
+        --secondary: rgb(23, 23, 23);
+        --body-bg: rgb(25, 25, 25);
+        --section-bg: rgb(0, 0, 0);
+
+        --shadow: 0px 3px 5px 0px rgb(14, 14, 14);
+    }
 }
 
 /* LIGHT MODE */
@@ -16,25 +26,10 @@
     :root {
         --primary: rgb(0, 36, 79);
         --secondary: rgb(225, 225, 225);
-        --highlight: rgb(255,149,0);
         --body-bg: rgb(239, 240, 244);
         --section-bg: rgb(220, 224, 232);
 
-        --shadow: 0px 3px 5px 0px rgb(170, 170, 170);
-    }
-}
-
-/* DARK MODE */
-@media screen and (prefers-color-scheme: dark) {
-    :root {
-
-        --primary: rgb(200, 200, 200);
-        --secondary: rgb(23, 23, 23);
-        --highlight: rgb(255, 149, 0);
-        --body-bg: rgb(25, 25, 25);
-        --section-bg: rgb(0, 0, 0);
-        
-        --shadow: 0px 3px 5px 0px rgb(14, 14, 14);
+        --shadow: 0px 3px 5px 0px rgb(170, 170, 170); 
     }
 }
 
@@ -100,6 +95,7 @@
   }
 
 body {
+    color-scheme: light dark;
     font-family: Open Sans Regular;
     background-color: var(--body-bg);
     color: var(--primary);
@@ -109,16 +105,16 @@ body {
 
 header {
     padding: .8em 2em 1em 2em;
+    margin-bottom: 1.5em;
     color: var(--primary);
     text-align: center;
     border-top: 2px solid var(--highlight);
-    background-color: var(--body-bg);
+    background-color: var(--section-bg);
 }
 
 h1 {
     font-family: Press Start Regular;
     font-size: 1.3rem;
-    /* letter-spacing: .05em; */
     line-height: 1.2em;
 }
 
@@ -133,7 +129,7 @@ header p {
 }
 
 section {
-    background: var(--section-bg);
+    background-color: var(--section-bg);
     padding: 1em 2em 1em 2em;
     margin: 0 0 2em 0;
 }
