@@ -2,7 +2,7 @@
 :root {
     color-scheme: light dark;
 
-    --highlight: rgb(255, 149, 0);
+    --highlight: hsl(35, 100%, 50%);
 
     --borderRadius: 1rem;
     --padding-left: 2em;
@@ -12,35 +12,33 @@
 /* DARK MODE */
 @media screen and (prefers-color-scheme: dark) {
     :root {
-        --primary: rgb(200, 200, 200);
-        --secondary: rgb(23, 23, 23);
-        --body-bg: rgb(25, 25, 25);
-        --header-bg: rgb(0, 0, 0);
-        --section-bg: rgb(0, 0, 0);
+        --primary: hsl(213, 100%, 95%);
+        --secondary: hsl(213, 50%, 10%);
 
-        --shadow: 0px 3px 5px 0px rgb(14, 14, 14);
+        --body-bg: hsl(213, 50%, 15%);
+
+        --shadow: 0px 3px 5px 0px hsl(0, 0%, 5%);
     }
 }
 
 /* LIGHT MODE */
 @media screen and (prefers-color-scheme: light) {
     :root {
-        --primary: rgb(0, 36, 79);
-        --secondary: rgb(225, 225, 225);
-        --body-bg: rgb(239, 240, 244);
-        --header-bg: rgb(220, 224, 232);
-        --section-bg: rgb(220, 224, 232);
+        --primary: hsl(213, 100%, 15%);
+        --secondary: hsl(213, 50%, 95%);
 
-        --shadow: 0px 3px 5px 0px rgb(170, 170, 170); 
+        --body-bg: hsl(213, 20%, 97%);
+
+        --shadow: 0px 3px 5px 0px hsl(0, 0%, 67%); 
     }
 }
 
 /* PRINT */
 @media print {
     :root {
-        --primary: rgb(0, 0, 0);
-        --secondary: rgb(225, 225, 225);
-        --highlight: rgb(255, 149, 0);
+        --primary: hsl(0, 0%, 0%);
+        --secondary: hsl(0, 0%, 88%);
+        --highlight: hsl(35, 100%, 50%);
         --body-bg: none;
         --section-bg: none;
     
@@ -108,10 +106,12 @@ body {
 header {
     padding: .8em 2em 1em 2em;
     margin-bottom: 2em;
+    position: sticky;
+    top: 0;
     color: var(--primary);
     text-align: center;
     border-top: 2px solid var(--highlight);
-    background-color: var(--header-bg);
+    background-color: var(--secondary);
 }
 
 h1 {
@@ -132,9 +132,9 @@ header p {
 }
 
 section {
-    background-color: var(--section-bg);
     padding: 1em 2em 1em 2em;
     margin: 0 0 2em 0;
+    background-color: var(--secondary);
 }
 
 section.cards {
