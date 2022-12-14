@@ -1,7 +1,14 @@
-/* DEFAULT DARK/LIGHT MODE: LIGHT*/
+/* by Berry Nieskens */
+/* www.nieskens.nl */
+
+
+/**************/
+/* VARIABLES */ 
+/************/
+
 :root {
     color-scheme: light dark;
-
+    /* vars for light and dark mode */
     --highlight: hsl(35, 100%, 50%);
 
     --borderRadius: 1rem;
@@ -9,36 +16,35 @@
 }
 
 
-/* DARK MODE */
+/* DARK MODE variables */
 @media screen and (prefers-color-scheme: dark) {
     :root {
-        --primary: hsl(213, 100%, 95%);
-        --secondary: hsl(213, 50%, 10%);
+        --primary: hsl(213, 100%, 92%); /* text color */
+        --secondary: rgb(13, 24, 38); /* sections bg */
 
-        --body-bg: hsl(213, 50%, 15%);
+        --body-bg: hsl(213, 50%, 15%); /* body bg */
 
-        --shadow: 0px 3px 5px 0px hsl(0, 0%, 5%);
+        --shadow: 0px 3px 5px 0px hsl(0, 0%, 5%); /* cards shadow */
     }
 }
 
-/* LIGHT MODE */
+/* LIGHT MODE variables */
 @media screen and (prefers-color-scheme: light) {
     :root {
-        --primary: hsl(213, 100%, 15%);
-        --secondary: hsl(213, 50%, 95%);
+        --primary: hsl(213, 100%, 15%); /* text color */
+        --secondary: hsl(213, 50%, 95%); /* sections bg */
 
-        --body-bg: hsl(213, 20%, 97%);
+        --body-bg: hsl(213, 20%, 97%); /* body bg */
 
-        --shadow: 0px 3px 5px 0px hsl(0, 0%, 67%); 
+        --shadow: 0px 3px 5px 0px hsl(0, 0%, 67%); /* cards shadow */
     }
 }
 
-/* PRINT */
+/* PRINT MODE variables*/
 @media print {
     :root {
         --primary: hsl(0, 0%, 0%);
-        --secondary: hsl(0, 0%, 88%);
-        --highlight: hsl(35, 100%, 50%);
+        --secondary: hsl(0, 0%, 100%);
         --body-bg: none;
         --section-bg: none;
     
@@ -46,18 +52,12 @@
     }
 }
 
-/* blauwe dark mode */
-/* 
-        --section-bg: rgba(0, 36, 79, 0.05);
-        --primary: rgb(200, 200, 200);
-        --secondary: rgb(0, 36, 79);
-        --highlight: rgb(255, 149, 0);
-        --body-bg: rgb(0, 36, 79);
-        --section-bg: rgb(0, 23, 61);
-*/
 
+/**********/
+/* FONTS */
+/********/
 
-/* body font */
+/* BODY font */
 @font-face {
     font-family: Open Sans Regular;
     src: url(fonts/OpenSans/OpenSans-Regular.ttf);
@@ -85,14 +85,19 @@
 @font-face {
     font-family: 'CC-ICONS';
     font-style: normal;
-    font-weight: normal;
     src: url('fonts/cc-icons.ttf') format('truetype');
 }
 
 
+/*********/
+/* BODY */
+/*******/
+
+/* by Jen Simmons */
 *, *::before, *::after {
     box-sizing: border-box;
   }
+/* github.com/jensimmons/cssremedy */
 
 body {
     color-scheme: light dark;
@@ -103,11 +108,43 @@ body {
     margin: 0 0;
 }
 
+
+/************/
+/* ANCHORS */
+/**********/
+
+a {
+    display: block;
+    font-size: 1em;
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--primary);
+    border-bottom: 2px solid var(--highlight);
+    width: max-content;
+    padding: .2em .5em .2em .5em;
+    transition: all .1s ease-in;
+}
+
+a:hover {
+    color: var(--secondary);
+    background-color: var(--primary);
+    border-bottom: 2px solid var(--highlight);
+}
+
+a:active {
+    background-color: var(--highlight);
+}
+
+
+/***********/
+/* HEADER */
+/*********/
+
 header {
     padding: .8em 2em 1em 2em;
     margin-bottom: 2em;
-    position: sticky;
-    top: 0;
+    /* position: sticky; */
+    /* top: 0; */
     color: var(--primary);
     text-align: center;
     border-top: 2px solid var(--highlight);
@@ -130,6 +167,11 @@ header p {
    color: var(--highlight);
    text-align: center;
 }
+
+
+/************/
+/* SECTION */
+/**********/
 
 section {
     padding: 1em 2em 1em 2em;
@@ -154,6 +196,17 @@ h2 {
     line-height: 1.4em; 
     border-left: 2px solid var(--highlight);
 }
+
+section.links ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 2em;
+}
+
+/************/
+/* ARTICLE */
+/**********/
 
 article {
     display: flex;
@@ -183,18 +236,6 @@ ul {
     padding: 0px;
 }
 
-a {
-    display: block;
-    font-size: 1em;
-    font-weight: bold;
-    text-decoration: none;
-    color: var(--primary);
-    border-bottom: 2px solid var(--highlight);
-    width: max-content;
-    padding: .2em .5em .2em .5em;
-    transition: all .1s ease-in;
-}
-
 article p:last-of-type {
     margin-bottom: 2em;
     /* align-self: end; */
@@ -205,22 +246,10 @@ article a {
     align-self: end;
 }
 
-section.links ul {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    gap: 2em;
-}
 
-a:hover {
-    color: var(--secondary);
-    background-color: var(--primary);
-    border-bottom: 2px solid var(--highlight);
-}
-
-a:active {
-    background-color: var(--highlight);
-}
+/************/
+/* FOOTER */
+/**********/
 
 footer {
     margin-top: -1em;
@@ -232,7 +261,7 @@ footer ul {
     justify-content: flex-start;
     flex-wrap: wrap;
     letter-spacing: 0.2em;
-    color: var(--secondary);
+    /* color: var(--secondary); */
 }
 
 footer ul li:first-of-type {
@@ -248,11 +277,9 @@ footer ul li:first-of-type {
 footer ul li {
     margin: 1em 1em;
     letter-spacing: 0.1em;
-
 }
 
 footer a {
     text-decoration: none;
     border: none;
 }
-
