@@ -7,48 +7,62 @@
 /************/
 
 :root {
-    color-scheme: light dark;
+    color-scheme: light dark grayscale;
     /* vars for light and dark mode */
     --highlight: hsl(35, 100%, 50%);
 
     --borderRadius: 1rem;
     --padding-left: 2em;
+
+    --preferred-color-scheme: dark;
 }
 
 
 /* DARK MODE variables */
 @media screen and (prefers-color-scheme: dark) {
     :root {
+        --preferred-color-scheme: dark;
+
         --primary: hsl(213, 100%, 92%); /* text color */
-        --secondary: rgb(13, 24, 38); /* sections bg */
+        --secondary: hsl(213, 50%, 10%); /* sections bg */
 
         --body-bg: hsl(213, 50%, 15%); /* body bg */
 
         --shadow: 0px 3px 5px 0px hsl(0, 0%, 5%); /* cards shadow */
+
+        
     }
 }
 
 /* LIGHT MODE variables */
 @media screen and (prefers-color-scheme: light) {
     :root {
+        --preferred-color-scheme: light;
+
         --primary: hsl(213, 100%, 15%); /* text color */
         --secondary: hsl(213, 50%, 95%); /* sections bg */
 
         --body-bg: hsl(213, 20%, 97%); /* body bg */
 
         --shadow: 0px 3px 5px 0px hsl(0, 0%, 67%); /* cards shadow */
+
+        
     }
 }
 
 /* PRINT MODE variables*/
 @media print {
     :root {
+        --preferred-color-scheme: grayscale;
+
         --primary: hsl(0, 0%, 0%);
         --secondary: hsl(0, 0%, 100%);
         --body-bg: none;
-        --section-bg: none;
+        --highlight: hsl(35, 100%, 40%);
     
         --shadow: none;
+
+        
     }
 }
 
@@ -135,6 +149,30 @@ a:active {
     background-color: var(--highlight);
 }
 
+
+/***********/
+/* BUTTONS */
+/*********/
+
+button {
+    cursor: pointer;
+    padding: .4em .8em;
+    background: var(--secondary);
+    border: 2px solid var(--highlight);
+    border-radius: .4em;
+    text-transform: uppercase;
+
+}
+
+button:hover {
+    background-color: var(--highlight);
+
+
+}
+
+button:active {
+    background-color: var(--highlight);
+}
 
 /***********/
 /* HEADER */
