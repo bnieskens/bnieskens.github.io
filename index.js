@@ -11,7 +11,7 @@ let currentColorScheme = bodyStyles.getPropertyValue('--preferred-color-scheme')
 
 /* SET THE APPROPRIATE LABEL FOR THE COLOR MODE BUTTON */
 // Select button that toggles color mode
-const colorModeButton = document.querySelector('#colorMode');
+const colorModeButton = document.querySelector('#colorModeButton');
 // Set label of button according to color mode
 if (currentColorScheme == 'dark') {
     // Set label of color mode button to dark
