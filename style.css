@@ -225,7 +225,7 @@ section.cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-gap: 20px;
-    padding-bottom: 2em;
+    padding-bottom: 4em;
 }
 
 h2 {
@@ -433,7 +433,7 @@ footer ul li.hamburger button.menuOpen span:nth-of-type(3) {
     aside {
         width: 20em;
         background-color: var(--secondary);
-        margin-right: 2em;
+        /* margin-right: 2em; */
         padding-top: 3em;
 
     }
