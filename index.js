@@ -32,10 +32,10 @@ const colorModeButton = document.querySelector('#colorModeButton');
 // Set label of button according to color mode
 if (currentColorScheme == 'dark') {
     // Set label of color mode button to dark
-    colorModeButton.textContent = 'light';
+    colorModeButton.textContent = 'light mode';
 } else if (currentColorScheme == 'light') {
     // Set label of color mode button to dark
-    colorModeButton.textContent = 'dark';
+    colorModeButton.textContent = 'dark mode';
 } else {
      // Set label of color mode button to color mode
     colorModeButton.textContent = 'color mode';
@@ -63,7 +63,7 @@ function changeColorMode() {
         document.body.style.setProperty('--shadow', '0px 3px 5px 0px hsl(0, 0%, 67%)');
 
          // Set label of color mode button
-        colorModeButton.textContent = 'dark';
+        colorModeButton.textContent = 'dark mode';
 
     } 
     /* LIGHT */
@@ -80,7 +80,7 @@ function changeColorMode() {
         document.body.style.setProperty('--shadow', '0px 3px 5px 0px hsl(0, 0%, 5%)');
 
         // Set label of color mode button
-        colorModeButton.textContent = 'light';
+        colorModeButton.textContent = 'light mode';
     
     } 
     else {

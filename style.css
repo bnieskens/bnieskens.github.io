@@ -214,7 +214,6 @@ nav button:hover {
 
 nav button:active {
     background-color: var(--highlight);
-    color: var(--primary);
 }
 
 
@@ -398,7 +397,7 @@ footer ul li.hamburger button.menuOpen span:nth-of-type(3) {
         bottom: 0;
         width: 100vw;
         border-top: 2px solid var(--highlight);
-        background-color: var(--body-bg);
+        background-color: var(--secondary);
         transform: translateY(100%);
         transition: .3s ease-in-out;
     }
@@ -452,7 +451,8 @@ footer ul li.hamburger button.menuOpen span:nth-of-type(3) {
     aside {
         width: 20em;
         background-color: var(--secondary);
-        padding-top: 3em;
+        padding-top: 7em;
+        margin-left: 0em;
     }
 
     section#links ul {
@@ -473,4 +473,18 @@ footer ul li.hamburger button.menuOpen span:nth-of-type(3) {
         text-indent: none;
         /* show menu text */
     }
+}
+
+/* https: //a11y-guidelines.orange.com/en/articles/accessible-hiding/ */
+.visually-hidden {
+    position: absolute;
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
 }
