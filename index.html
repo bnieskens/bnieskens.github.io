@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Berry Nieskens - Digital Design</title>
     <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/31d5f16f5c.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
 
   <body>
@@ -15,6 +19,46 @@
     </header>
 
     <main>
+      <aside>
+        <nav>
+          <!-- <section id="menu">
+            <h3>Menu</h3>
+          </section> -->
+
+          <section id="links">
+            <h3>Links</h3>
+            <ul>
+              <li>
+                <a
+                  aria-label="Externe link naar het Linked In account van Berry Nieskens"
+                  href="https://www.linkedin.com/in/nieskens/"
+                >
+                  LinkedIn <i class="fa-solid fa-arrow-up-right-from-square"></i
+                ></a>
+                <!-- <i class="fa-solid fa-arrow-up-right-from-square"></i> -->
+              </li>
+              <li>
+                <a
+                  aria-label="Externe link naar de opleiding Communicatie- en Multimedia Design aan de Hogeschool van Amsterdam."
+                  href="https://www.cmd-amsterdam.nl/"
+                  >CMD (HvA)
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i
+                ></a>
+              </li>
+            </ul>
+          </section>
+
+          <section id="settings">
+            <h3>Settings</h3>
+            <ul>
+              <li>
+                <button id="colorModeButton">color mode</button>
+              </li>
+            </ul>
+          </section>
+        </nav>
+      </aside>
+
       <section class="cards">
         <h2>Digitale geletterdheid & informatica</h2>
         <article>
@@ -77,39 +121,25 @@
           >
         </article>
       </section>
-
-      <section class="links">
-        <h2></h2>
-        <ul>
-          <li>
-            <a
-              aria-label="Link naar het Linked In account van Berry Nieskens"
-              href="https://www.linkedin.com/in/nieskens/"
-              >LinkedIn</a
-            >
-          </li>
-          <li>
-            <a
-              aria-label="Link naar de opleiding Communicatie- en Multimedia Design aan de Hogeschool van Amsterdam."
-              href="https://www.cmd-amsterdam.nl/"
-              >HvA - CMD</a
-            >
-          </li>
-        </ul>
-      </section>
     </main>
 
     <footer>
       <ul>
-        <li>
+        <li class="hamburger">
+          <button aria-label="menu button">
+            menu
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </li>
+
+        <li class="creativeCommons">
           <a
             aria-label="Link naar de Creative Commons licentie voor deze website."
             href="https://creativecommons.org/licenses/by-nc-sa/4.0/"
             ><span class="cc">cbna</span></a
           >
-        </li>
-        <li>
-          <button id="colorModeButton">color mode</button>
         </li>
       </ul>
     </footer>

@@ -10,10 +10,8 @@
     color-scheme: light dark grayscale;
     /* vars for light and dark mode */
     --highlight: hsl(35, 100%, 50%);
-
     --borderRadius: 1rem;
     --padding-left: 2em;
-
     --preferred-color-scheme: dark;
 }
 
@@ -22,15 +20,10 @@
 @media screen and (prefers-color-scheme: dark) {
     :root {
         --preferred-color-scheme: dark;
-
         --primary: hsl(213, 100%, 92%); /* text color */
         --secondary: hsl(213, 50%, 10%); /* sections bg */
-
         --body-bg: hsl(213, 50%, 15%); /* body bg */
-
-        --shadow: 0px 3px 5px 0px hsl(0, 0%, 5%); /* cards shadow */
-
-        
+        --shadow: 0px 3px 5px 0px hsl(0, 0%, 5%); /* cards shadow */   
     }
 }
 
@@ -38,15 +31,10 @@
 @media screen and (prefers-color-scheme: light) {
     :root {
         --preferred-color-scheme: light;
-
         --primary: hsl(213, 100%, 15%); /* text color */
-        --secondary: hsl(213, 50%, 95%); /* sections bg */
-
+        --secondary: hsl(213, 50%, 93%); /* sections bg */
         --body-bg: hsl(213, 20%, 97%); /* body bg */
-
         --shadow: 0px 3px 5px 0px hsl(0, 0%, 67%); /* cards shadow */
-
-        
     }
 }
 
@@ -54,15 +42,11 @@
 @media print {
     :root {
         --preferred-color-scheme: grayscale;
-
         --primary: hsl(0, 0%, 0%);
         --secondary: hsl(0, 0%, 100%);
         --body-bg: none;
         --highlight: hsl(35, 100%, 40%);
-    
-        --shadow: none;
-
-        
+        --shadow: none;  
     }
 }
 
@@ -120,9 +104,14 @@ body {
     color: var(--primary);
     line-height: 1.7em;
     margin: 0 0;
+    /* hide horizontal scroll bar */
+    overflow-x: hidden;
 }
 
+main {
+    padding-bottom: 2em;
 
+}
 /************/
 /* ANCHORS */
 /**********/
@@ -151,36 +140,15 @@ a:active {
 
 
 /***********/
-/* BUTTONS */
-/*********/
-
-button {
-    cursor: pointer;
-    padding: .6em 1.2em;
-    background: var(--secondary);
-    border: 1px solid var(--highlight);
-    border-radius: 1.5em;
-    text-transform: uppercase;
-    font-weight: bold;
-
-}
-
-button:hover {
-    background-color: var(--highlight);
-
-
-}
-
-button:active {
-    background-color: var(--highlight);
-}
-
-/***********/
 /* HEADER */
 /*********/
 
 header {
-    padding: .8em 2em 1em 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: .2em;
+    padding: .5em 2em 1em 2em;
     margin-bottom: 2em;
     /* position: sticky; */
     /* top: 0; */
@@ -192,19 +160,59 @@ header {
 
 h1 {
     font-family: Press Start Regular;
-    font-size: 1.2rem;
-    line-height: 1.2em;
+    font-size: 1.2em;
+    line-height: 1.6em;
     letter-spacing: .1em;
 }
 
 header p {
-   margin: -1.2em 0 0 0;
-   font-size: .8em;
-   font-weight: 500;
-   letter-spacing: .5em;
-   text-transform: uppercase;
-   color: var(--highlight);
-   text-align: center;
+    margin: -1em 0 0 0;
+    font-size: 1em;
+    font-weight: 500;
+    letter-spacing: .5em;
+    text-transform: uppercase;
+    color: var(--highlight);
+    text-align: center;
+}
+
+header ul {
+    display: flex;
+    justify-items: center;
+}
+
+
+
+/*********/
+/* ASIDE */
+/*********/
+
+/* Nav external links */
+main aside section li {
+        margin-bottom: 1em;
+}
+
+/* main aside section#links a::after {
+    content: '';
+} */
+
+
+/* nav buttons */
+nav button {
+    cursor: pointer;
+    padding: .6em 1.2em;
+    background: var(--secondary);
+    border: 1px solid var(--highlight);
+    border-radius: 1.5em;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+nav button:hover {
+    background-color: var(--highlight);
+}
+
+nav button:active {
+    background-color: var(--highlight);
 }
 
 
@@ -213,8 +221,8 @@ header p {
 /**********/
 
 section {
-    padding: 1em 2em 1em 2em;
-    margin: 0 0 2em 0;
+    padding: 1em 1em 1em 2em;
+    margin: 0;
     background-color: var(--secondary);
 }
 
@@ -222,7 +230,7 @@ section.cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-gap: 20px;
-    padding-bottom: 3em;
+    padding-bottom: 2em;
 }
 
 h2 {
@@ -267,7 +275,6 @@ h4 {
     font-family: Open Sans Light Italic;
     margin-bottom: 0.1em;
     margin-top: -.8em;
-    /* color: var(--secondary); */
 }
 
 ul {
@@ -277,7 +284,6 @@ ul {
 
 article p:last-of-type {
     margin-bottom: 2em;
-    /* align-self: end; */
 }
 
 article a {
@@ -291,34 +297,158 @@ article a {
 /**********/
 
 footer {
-    margin-top: -1em;
-    padding-left: 2em;
+    padding: 0 2em .5em 2em;
+    width: 100vw;
+    background-color: var(--secondary);
+    border-top: 2px solid var(--highlight);
+
+}
+
+footer a {
+    text-decoration: none;
+    border: none;
 }
 
 footer ul {
     display: flex;
     justify-content: flex-start;
     flex-wrap: wrap;
+    margin-bottom: .5em;
     letter-spacing: 0.2em;
-    /* color: var(--secondary); */
 }
 
-footer ul li:first-of-type {
+footer ul li.creativeCommons {
     font-family: 'CC-ICONS';
     font-size: 1.4rem;
     line-height: 1em;
-    letter-spacing: 0.3em;
-    margin: .7em 0;
     letter-spacing: 0.1em;
-    
 }   
 
-footer ul li {
-    margin: 1em 1em;
-    letter-spacing: 0.1em;
+/* HAMBURGER MENU BUTTON */
+/* based on code by Sanne 't Hooft */
+/* https://codepen.io/shooft/pen/dymRMBZ */
+
+footer ul li.hamburger {
+    padding-right: 1em;
+    margin-right: auto;
+}   
+
+footer ul li.hamburger button {
+    height: 3em;
+    text-indent: 120%; /* hide menu text */
+    overflow: hidden; /* hide menu text */
+    border: none;
+    background-color: var(--secondary);
+    cursor: pointer;
+
+    /* by Sanne 't Hooft */
+    font-size: .75em;
+    display: grid;
+    grid-template-rows: 1fr min-content;
+    
 }
 
-footer a {
-    text-decoration: none;
-    border: none;
+footer ul li.hamburger button span {
+    grid-row-start: 1;
+    grid-column-start: 1;
+    place-self: end center;
+    width: 1.4rem;
+    height: .1rem;
+    background-color: var(--highlight);
+    transition-duration: .5s;
+}
+
+footer ul li.hamburger button span:nth-of-type(1) {
+    transform:translateY(-.8rem);
+}
+
+footer ul li.hamburger button span:nth-of-type(2) {
+    transform:translateY(-.4rem);
+}
+
+footer ul li.hamburger button span:nth-of-type(3) {
+    /* staat op de juiste plek */
+
+}
+
+footer ul li.hamburger button.menuOpen span:nth-of-type(1) {
+    transform: translateY(-.4rem) rotate(45deg) scalex(1.25);
+}
+
+footer ul li.hamburger button.menuOpen span:nth-of-type(2) {
+    opacity: 0;
+}
+
+footer ul li.hamburger button.menuOpen span:nth-of-type(3) {
+    transform: translateY(-.4rem) rotate(-45deg) scalex(1.25);
+}
+
+
+/**************/
+/* RESPONSIVE */
+/**************/
+
+/* MOBILE */
+
+@media screen and (max-width: 800px) {
+    aside {
+        display: block;
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100vw;
+        height: auto;
+        border-top: 2px solid var(--highlight);
+        background-color: var(--body-bg);
+        transform: translateY(100%);
+        transition: .3s ease-in-out;
+   
+    }
+
+    aside.openNav {
+        transform: translateY(-3em);
+    }
+
+    footer {
+        position: fixed;
+        bottom: 0;
+        border-top: 2px solid var(--highlight);
+        transition: .1s;
+    }
+
+    footer.noTopBorder {
+        border-top: 2px solid var(--secondary);
+    }
+
+}
+
+/* DESKTOP */
+
+@media screen and (min-width: 801px) {
+    footer ul li:first-of-type {
+        display: none;
+    }
+
+    main {
+        display: flex;
+    }
+
+    aside {
+        width: 22em;
+        background-color: var(--secondary);
+        /* margin-right: 2em; */
+
+    }
+
+    footer {
+        position: fixed;
+        bottom: 0;
+    }
+
+    footer ul li.hamburger button {
+        height: 3em;
+        text-indent: none;
+        /* show menu text */
+    }
 }

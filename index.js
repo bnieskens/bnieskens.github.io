@@ -1,10 +1,29 @@
-// Get computed styles for the body element
-const bodyStyles = window.getComputedStyle(document.body);
+/********************/
+/* HAMBURGER BUTTON */
+/********************/
+
+// Select button and nav element
+const menuButton = document.querySelector("footer li.hamburger button");
+const aside = document.querySelector("main aside");
+const footer = document.querySelector("footer");
+
+// Add event listener
+menuButton.addEventListener("click", function(){
+    //  console.log('Open menu');
+     menuButton.classList.toggle("menuOpen");
+    aside.classList.toggle("openNav");
+    footer.classList.toggle("noTopBorder");
+});
+
+
 
 
 /***************************************** */ 
 /* TOGGLE COLOR MODE: DARK | LIGHT | PRINT */
 /*******************************************/
+
+// Get computed styles for the body element
+const bodyStyles = window.getComputedStyle(document.body);
 
 // Get computed style for color-scheme
 let currentColorScheme = bodyStyles.getPropertyValue('--preferred-color-scheme');
@@ -43,7 +62,7 @@ function changeColorMode() {
         // root.style.setProperty('--primary', 'rgb(200, 200, 200)');
         document.body.style.setProperty('color-scheme', 'light');
         document.body.style.setProperty('--primary', 'hsl(213, 100%, 15%)');
-        document.body.style.setProperty('--secondary', 'hsl(213, 50%, 95%)');
+        document.body.style.setProperty('--secondary', 'hsl(213, 50%, 93%)');
         document.body.style.setProperty('--body-bg', 'hsl(213, 20%, 97%)');
         document.body.style.setProperty('--highlight', 'hsl(35, 100%, 50%)');
         document.body.style.setProperty('--shadow', '0px 3px 5px 0px hsl(0, 0%, 67%)');
