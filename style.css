@@ -199,6 +199,7 @@ main aside section li {
 nav button {
     cursor: pointer;
     padding: .6em 1.2em;
+    color: var(--primary);
     background: var(--secondary);
     border: 1px solid var(--highlight);
     border-radius: 1.5em;
@@ -208,10 +209,12 @@ nav button {
 
 nav button:hover {
     background-color: var(--highlight);
+    color: var(--primary);
 }
 
 nav button:active {
     background-color: var(--highlight);
+    color: var(--primary);
 }
 
 
@@ -329,11 +332,12 @@ footer ul li.hamburger {
 
 footer ul li.hamburger button {
     height: 3em;
-    text-indent: 120%; /* hide menu text */
+    text-indent: 150%; /* hide menu text */
     overflow: hidden; /* hide menu text */
     border: none;
     background-color: var(--secondary);
     cursor: pointer;
+    color: var(--primary);
 
     /* by Sanne 't Hooft */
     font-size: .75em;
