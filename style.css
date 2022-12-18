@@ -191,11 +191,6 @@ main aside section li {
         margin-bottom: 1em;
 }
 
-/* main aside section#links a::after {
-    content: '';
-} */
-
-
 /* nav buttons */
 nav button {
     cursor: pointer;
@@ -394,6 +389,7 @@ footer ul li.hamburger button.menuOpen span:nth-of-type(3) {
     aside {
         display: block;
         position: fixed;
+        padding-bottom: 1em;
         left: 0;
         right: 0;
         bottom: 0;
@@ -435,9 +431,10 @@ footer ul li.hamburger button.menuOpen span:nth-of-type(3) {
     }
 
     aside {
-        width: 22em;
+        width: 20em;
         background-color: var(--secondary);
-        /* margin-right: 2em; */
+        margin-right: 2em;
+        padding-top: 3em;
 
     }
 

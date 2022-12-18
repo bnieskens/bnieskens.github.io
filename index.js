@@ -34,13 +34,13 @@ const colorModeButton = document.querySelector('#colorModeButton');
 // Set label of button according to color mode
 if (currentColorScheme == 'dark') {
     // Set label of color mode button to dark
-    colorModeButton.textContent = 'light mode';
+    colorModeButton.textContent = 'light';
 } else if (currentColorScheme == 'light') {
     // Set label of color mode button to light
-    colorModeButton.textContent = 'print mode';
+    colorModeButton.textContent = 'high contrast';
 } else if (currentColorScheme == 'grayscale') {
     // Set label of color mode button to light
-    colorModeButton.textContent = 'dark mode';
+    colorModeButton.textContent = 'dark';
 } else {
      // Set label of color mode button to toggle
     colorModeButton.textContent = 'toggle color mode';
@@ -68,7 +68,7 @@ function changeColorMode() {
         document.body.style.setProperty('--shadow', '0px 3px 5px 0px hsl(0, 0%, 67%)');
 
          // Set label of color mode button
-        colorModeButton.textContent = 'print mode';
+        colorModeButton.textContent = 'high contrast';
 
     } 
     /* LIGHT */
@@ -85,7 +85,7 @@ function changeColorMode() {
         document.body.style.setProperty('--shadow', 'none');
 
         // Set label of color mode button
-        colorModeButton.textContent = 'dark mode';
+        colorModeButton.textContent = 'dark';
     
     } 
     /* PRINT */
@@ -103,7 +103,7 @@ function changeColorMode() {
 
 
          // Set label of color mode button
-        colorModeButton.textContent = 'light mode';
+        colorModeButton.textContent = 'light';
     } 
     else {
         console.log("Neither.");
