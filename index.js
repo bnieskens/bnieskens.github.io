@@ -16,8 +16,6 @@ menuButton.addEventListener("click", function(){
 });
 
 
-
-
 /***************************************** */ 
 /* TOGGLE COLOR MODE: DARK | LIGHT | PRINT */
 /*******************************************/
@@ -36,14 +34,11 @@ if (currentColorScheme == 'dark') {
     // Set label of color mode button to dark
     colorModeButton.textContent = 'light';
 } else if (currentColorScheme == 'light') {
-    // Set label of color mode button to light
-    colorModeButton.textContent = 'high contrast';
-} else if (currentColorScheme == 'grayscale') {
-    // Set label of color mode button to light
+    // Set label of color mode button to dark
     colorModeButton.textContent = 'dark';
 } else {
-     // Set label of color mode button to toggle
-    colorModeButton.textContent = 'toggle color mode';
+     // Set label of color mode button to color mode
+    colorModeButton.textContent = 'color mode';
 }
 
 /* ADD EVENT LISTENER TO COLOR MODE BUTTON */ 
@@ -68,29 +63,12 @@ function changeColorMode() {
         document.body.style.setProperty('--shadow', '0px 3px 5px 0px hsl(0, 0%, 67%)');
 
          // Set label of color mode button
-        colorModeButton.textContent = 'high contrast';
+        colorModeButton.textContent = 'dark';
 
     } 
     /* LIGHT */
     else if (preferredColorScheme == 'light') {
         // Set color scheme to print
-        document.body.style.setProperty('--preferred-color-scheme', 'grayscale');
-
-        // root.style.setProperty('--primary', 'rgb(200, 200, 200)');
-        document.body.style.setProperty('color-scheme', 'grayscale');
-        document.body.style.setProperty('--primary', 'hsl(0, 0%, 0%)');
-        document.body.style.setProperty('--secondary', 'hsl(0, 0%, 100%)');
-        document.body.style.setProperty('--body-bg', 'hsl(0, 0%, 100%)');
-        document.body.style.setProperty('--highlight', 'hsl(35, 100%, 40%)');
-        document.body.style.setProperty('--shadow', 'none');
-
-        // Set label of color mode button
-        colorModeButton.textContent = 'dark';
-    
-    } 
-    /* PRINT */
-    else if (preferredColorScheme == 'grayscale') { 
-        // Set color scheme to dark
         document.body.style.setProperty('--preferred-color-scheme', 'dark');
 
         // root.style.setProperty('--primary', 'rgb(200, 200, 200)');
@@ -101,9 +79,9 @@ function changeColorMode() {
         document.body.style.setProperty('--highlight', 'hsl(35, 100%, 50%)');
         document.body.style.setProperty('--shadow', '0px 3px 5px 0px hsl(0, 0%, 5%)');
 
-
-         // Set label of color mode button
+        // Set label of color mode button
         colorModeButton.textContent = 'light';
+    
     } 
     else {
         console.log("Neither.");

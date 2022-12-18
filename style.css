@@ -7,7 +7,7 @@
 /************/
 
 :root {
-    color-scheme: light dark grayscale;
+    color-scheme: light dark;
     /* vars for light and dark mode */
     --highlight: hsl(35, 100%, 50%);
     --borderRadius: 1rem;
@@ -186,6 +186,10 @@ header ul {
 /* ASIDE */
 /*********/
 
+main aside {
+    text-align: end;
+}
+
 /* Nav external links */
 main aside section li {
         margin-bottom: 1em;
@@ -216,7 +220,7 @@ nav button:active {
 /**********/
 
 section {
-    padding: 1em 1em 1em 2em;
+    padding: 1em 1.5em;
     margin: 0;
     background-color: var(--secondary);
 }
@@ -239,12 +243,7 @@ h2 {
     border-left: 2px solid var(--highlight);
 }
 
-section.links ul {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    gap: 2em;
-}
+
 
 /************/
 /* ARTICLE */
@@ -394,16 +393,32 @@ footer ul li.hamburger button.menuOpen span:nth-of-type(3) {
         right: 0;
         bottom: 0;
         width: 100vw;
-        height: auto;
         border-top: 2px solid var(--highlight);
         background-color: var(--body-bg);
         transform: translateY(100%);
         transition: .3s ease-in-out;
-   
+    }
+
+    aside nav {
+        display: flex;
+        justify-content: space-evenly;
+        background-color: var(--secondary);
+    }
+    aside nav section {
+        padding-left: 1em;
+        text-align: start;
     }
 
     aside.openNav {
         transform: translateY(-3em);
+    }
+
+    section#links ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: start;
+        gap: 0;
     }
 
     footer {
@@ -433,9 +448,15 @@ footer ul li.hamburger button.menuOpen span:nth-of-type(3) {
     aside {
         width: 20em;
         background-color: var(--secondary);
-        /* margin-right: 2em; */
         padding-top: 3em;
+    }
 
+    section#links ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: end;
+        gap: 0em;
     }
 
     footer {
