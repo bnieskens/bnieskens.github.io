@@ -192,7 +192,7 @@ main aside {
 
 /* Nav external links */
 main aside section li {
-        margin-bottom: 1em;
+    margin-bottom: 1em;
 }
 
 /* nav buttons */
@@ -297,7 +297,6 @@ footer {
     width: 100vw;
     background-color: var(--secondary);
     border-top: 2px solid var(--highlight);
-
 }
 
 footer a {
@@ -337,8 +336,6 @@ footer ul li.hamburger button {
     background-color: var(--secondary);
     cursor: pointer;
     color: var(--primary);
-
-    /* by Sanne 't Hooft */
     font-size: .75em;
     display: grid;
     grid-template-rows: 1fr min-content;
@@ -448,10 +445,14 @@ footer ul li.hamburger button.menuOpen span:nth-of-type(3) {
         display: flex;
     }
 
+    main section {
+        padding-left: 2.5em;
+    }
     aside {
         width: 20em;
         background-color: var(--secondary);
         padding-top: 7em;
+        padding-right: 1em;
         margin-left: 0em;
     }
 
