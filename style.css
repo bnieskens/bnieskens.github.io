@@ -138,6 +138,26 @@ a:active {
     background-color: var(--highlight);
 }
 
+p a {
+    display: unset;
+    font-size: unset;
+    font-style: unset;
+    font-weight: unset;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-decoration-color: var(--highlight);
+    border-bottom: unset;
+    color: var(--primary);
+    /* width: max-content; */
+    padding: unset;
+
+}
+
+article p a:hover {
+    color: var(--highlight);
+    background-color: unset;
+    border-bottom: unset;
+}
 
 /***********/
 /* HEADER */
