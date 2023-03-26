@@ -1,4 +1,8 @@
-// VARS & CONSTANTS
+/*****************
+ VARS & CONSTANTS 
+******************/
+
+// UI-elementsw
 const allColorDivs = document.querySelectorAll(".colorDiv")
 const sectionColorDivs = document.querySelector("#colorDivs")
 const btnStartGame = document.querySelector("#startGame")
@@ -6,6 +10,7 @@ const pGameStatus = document.querySelector("#gameStatus")
 const divScore = document.querySelector("#score")
 const divHighScore = document.querySelector("#highScore")
 
+// Variables & constants
 const highlightTimeout = 150
 const simonTimeout = 1000
 
@@ -21,7 +26,10 @@ let gameOn = true
 const arrColors = []
 allColorDivs.forEach((color => {arrColors.push(color.id)}))
 
-// Event listener 
+/********************
+ * EVENT LISTENERS *
+ *******************/
+
 // click on colorDiv
 allColorDivs.forEach((colorDiv) => {
     colorDiv.addEventListener('click', addColorUser)
@@ -30,7 +38,11 @@ allColorDivs.forEach((colorDiv) => {
 // start game button
 btnStartGame.addEventListener('click', startGame)
 
-// GAME CONTROLS
+/******************
+ * GAME CONTROLS
+******************/
+
+// START GAME
 function startGame() {
     // change start button to restart game
     btnStartGame.textContent = "Restart game"
@@ -42,6 +54,7 @@ function startGame() {
     playNextRound()
 }
 
+// PLAY NEXT ROUND
 function playNextRound() {
     if (gameOn) {
         arrUserSays = []
@@ -53,6 +66,7 @@ function playNextRound() {
     }
 }
 
+// STOP GAME
 function stopTheGame() {
     gameOn = false
     btnStartGame.textContent = "Start a new game"
@@ -60,14 +74,31 @@ function stopTheGame() {
     toggleColorDivsActive()
 }
 
-// COLOR PICKER CONTROLS
-// Add color to Simon says
+
+/******************
+ * PLAY CONTROLS
+******************/
+
+// SIMON SAYS
 function addColorSimon() {
     currentColor = arrColors[Math.floor(Math.random() * 4)]
     arrSimonSays.push(currentColor)
 }
 
-// Add color to user says
+function highlightSimonColors(colorNumber) {
+    // Roep recursief aan totdat alle kleuren in de lijst zijn gehighlight
+    if (colorNumber < arrSimonSays.length) {
+        color = arrSimonSays[colorNumber]
+        matchingDiv = document.querySelector("#" + color)
+        highlightOn(matchingDiv)
+        setTimeout(() => { highlightSimonColors(colorNumber+1) }, simonTimeout) 
+    } else {
+        updateGameStatus("Your turn!")
+        colorDivsActive() // Make colordivs clickable for user input
+    }
+}
+
+// USER SAYS
 function addColorUser(event) {
     currentDiv = event.currentTarget
     arrUserSays.push(currentDiv.id)
@@ -109,6 +140,7 @@ function checkArrUserSays(){
     }
 } 
 
+// DE(ACTIVATE) COLORDIVS
 function colorDivsActive() {
     sectionColorDivs.classList.add("active")
 }
@@ -134,18 +166,7 @@ function updateGameStatus(message) {
     pGameStatus.textContent = message
 }
 
-function highlightSimonColors(colorNumber) {
 
-    if (colorNumber < arrSimonSays.length) {
-        color = arrSimonSays[colorNumber]
-        matchingDiv = document.querySelector("#" + color)
-        highlightOn(matchingDiv)
-        setTimeout(() => { highlightSimonColors(colorNumber+1) }, simonTimeout) // Hightlights komen nog gelijktijdig
-    } else {
-        updateGameStatus("Your turn!")
-        colorDivsActive() // Make colordivs clickable for user input
-    }
-}
 
 
 
