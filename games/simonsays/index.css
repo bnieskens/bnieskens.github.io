@@ -3,15 +3,42 @@
   --color-yellow: hsl(60, 100%, 50%);
   --color-green: hsl(130, 100%, 50%);
   --color-blue: hsl(220, 100%, 50%);
-  --body-bg: hsl(0, 0%, 0%);
+  --body-bg: hsl(0, 0%, 10%);
+  --font-color: hsl(0, 100%, 100%);
 }
 
 html,
 body {
+  font-family: sans-serif;
   margin: 0;
   padding: 1em 3em;
   background-color: var(--body-bg);
-  color: white;
+  color: var(--font-color);
+}
+
+h1 {
+  margin-bottom: 0em;
+}
+
+h2 {
+  font-style: italic;
+  margin-top: 0.2em;
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+  gap: 3em;
+}
+
+section {
+  margin: 1em 0em;
+}
+
+#gameStatus {
+  font-size: 32px;
+  padding: 0em;
+  margin: 0;
 }
 
 #colorDivs {
@@ -25,22 +52,15 @@ body {
   pointer-events: all;
 }
 
-#gameStatus {
-  font-size: 32px;
-}
-section {
-  margin: 1em 0em;
-}
-
 .colorDiv {
   display: inline;
   cursor: pointer;
-  text-align: center;
-  padding-top: 1em;
+  transition: ease-in-out 0.3s;
 }
 
 .colorDiv.highlight {
-  border: solid 50px white;
+  /* border: solid 100% white; */
+  border-radius: 100%;
 }
 
 div.divBorder {

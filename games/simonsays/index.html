@@ -1,27 +1,39 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title></title>
+    <title>Simon says - color edition</title>
     <link rel="stylesheet" href="index.css" />
   </head>
   <body>
-    <h1>Copy colors</h1>
-    <section id="sectionMenu">
-      <button id="startGame">Start a new game</button>
-    </section>
+    <header>
+      <h1>Simon says</h1>
+      <h2>Color edition</h2>
+    </header>
 
-    <p id="gameStatus">Welcome!</p>
-    <section id="colorDivs">
-      <div class="colorDiv" id="red"></div>
-      <div class="colorDiv" id="yellow"></div>
-      <div class="colorDiv" id="green"></div>
-      <div class="colorDiv" id="blue"></div>
-    </section>
-    <section id="sectionScore">
-      <div id="score">Score:</div>
-      <div id="highScore">High score:</div>
-    </section>
+    <main>
+      <section id="sectionGame">
+        <p id="gameStatus">Welcome!</p>
+        <section id="colorDivs">
+          <div class="colorDiv" id="red"></div>
+          <div class="colorDiv" id="yellow"></div>
+          <div class="colorDiv" id="green"></div>
+          <div class="colorDiv" id="blue"></div>
+        </section>
+      </section>
 
+      <section id="sectionSettings">
+        <section id="sectionMenu">
+          <button id="startGame">Start a new game</button>
+        </section>
+
+        <section id="sectionScore">
+          <div id="score">Score:</div>
+          <div id="highScore">High score:</div>
+        </section>
+      </section>
+    </main>
+
+    <footer></footer>
     <script src="index.js"></script>
   </body>
 </html>
