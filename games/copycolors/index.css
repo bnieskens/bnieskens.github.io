@@ -1,0 +1,64 @@
+:root {
+  --color-red: hsl(0, 100%, 50%);
+  --color-yellow: hsl(60, 100%, 50%);
+  --color-green: hsl(130, 100%, 50%);
+  --color-blue: hsl(220, 100%, 50%);
+  --body-bg: hsl(0, 0%, 0%);
+}
+
+html,
+body {
+  margin: 0;
+  padding: 1em 3em;
+  background-color: var(--body-bg);
+  color: white;
+}
+
+#colorDivs {
+  display: grid;
+  grid-template-columns: 200px 200px;
+  grid-template-rows: 200px 200px;
+  pointer-events: none;
+}
+
+#colorDivs.active {
+  pointer-events: all;
+}
+
+#gameStatus {
+  font-size: 32px;
+}
+section {
+  margin: 1em 0em;
+}
+
+.colorDiv {
+  display: inline;
+  cursor: pointer;
+  text-align: center;
+  padding-top: 1em;
+}
+
+.colorDiv.highlight {
+  border: solid 50px white;
+}
+
+div.divBorder {
+  border: 3px solid black;
+}
+
+#red {
+  background-color: var(--color-red);
+}
+
+#yellow {
+  background-color: var(--color-yellow);
+}
+
+#green {
+  background-color: var(--color-green);
+}
+
+#blue {
+  background-color: var(--color-blue);
+}
