@@ -128,7 +128,7 @@ a {
     transition: all .1s ease-in;
 }
 
-a:hover {
+a:hover, a:focus {
     color: var(--secondary);
     background-color: var(--primary);
     border-bottom: 2px solid var(--highlight);
@@ -136,6 +136,10 @@ a:hover {
 
 a:active {
     background-color: var(--highlight);
+}
+
+a:focus {
+    border: dotted var(--highlight) 3px;
 }
 
 p a {
