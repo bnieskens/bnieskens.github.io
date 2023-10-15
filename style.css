@@ -292,7 +292,7 @@ h3 {
     line-height: 1.3em;
 }
 
-h4 {
+.media-name {
     font-family: Open Sans Light Italic;
     margin-bottom: 0.1em;
     margin-top: -.8em;
